@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Diabetes Checker</title>
+<style type="text/css">
+	body{
+	margin: 0;
+	padding: 0;
+	background: url(/static/back.jpg);
+	background-size: cover;
+	font-family: sans-serif;
+}
+h2 {
+    position: absolute;
+    left: 500px;
+    top: 300px;
+
+
+}
+#demo{
+	font-family : sans-serif;
+}
+</style>
+<script type="text/javascript">
+	function disp_res()
+	{
+		alert({{prediction}});
+		if ({{prediction}} == 1)
+		{
+			document.getElementById("demo").innerHTML = "Uhh oh! You might have ";
+		}
+		else
+		{
+			document.getElementById("demo").innerHTML = "Congratulations you don't have";
+		}
+	}
+</script>
+</head>
+<body>
+	<h2 id="demo"></h2>
+	<button onClick="disp_res()">Display Result</button>
+</body>
+</html>
